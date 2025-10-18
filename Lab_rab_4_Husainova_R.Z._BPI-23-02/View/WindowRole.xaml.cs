@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.View
         public WindowRole()
         {
             InitializeComponent();
+            DataContext = new RoleViewModel();
         }
     }
 }

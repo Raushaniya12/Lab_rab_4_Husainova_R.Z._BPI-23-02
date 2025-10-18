@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab_rab_4_Husainova_R.Z._BPI_23_02.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,4 +34,5 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02
             WindowRole wRole = new WindowRole(); wRole.Show();
         }
     }
+
 }
