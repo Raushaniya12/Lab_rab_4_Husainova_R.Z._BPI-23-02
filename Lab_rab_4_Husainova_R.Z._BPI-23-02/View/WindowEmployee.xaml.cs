@@ -22,17 +22,17 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.View
                 roles.Add(r);
             }
 
-            ObservableCollection<PersonDPO> persons = new ObservableCollection<PersonDPO>();
+            ObservableCollection <PersonDpo> persons = new ObservableCollection <PersonDpo>();
 
             foreach (var p in vmPerson.ListPerson)
             {
                 FindRole finder = new FindRole(p.RoleId);
                 Role rol = roles.Find(new System.Predicate<Role>(finder.RolePredicate));
 
-                persons.Add(new PersonDPO
+                persons.Add(new PersonDpo
                 {
                     Id = p.Id,
-                    Role = rol.NameRole,
+                    RoleName = rol.NameRole,
                     FirstName = p.FirstName,
                     LastName = p.LastName,
                     Birthday = p.Birthday

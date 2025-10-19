@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,8 +18,30 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.Model
         public Person(int id, int roleId, string firstName, string lastName, DateTime birthday)
         {
             this.Id = id; this.RoleId = roleId;
-            this.FirstName = firstName; this.LastName = lastName; this.Birthday = birthday;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Birthday = birthday;
         }
-
+        public Person CopyFromPersonDPO(PersonDpo dpo)
+        {
+            RoleViewModel vmRole = new RoleViewModel();
+            int roleId = 0;
+            foreach (var r in vmRole.ListRole)
+            {
+                if (r.NameRole == dpo.RoleName)
+                {
+                    roleId = r.Id;
+                    break;
+                }
+            }
+            return new Person
+            {
+                Id = dpo.Id,
+                RoleId = roleId,
+                FirstName = dpo.FirstName,
+                LastName = dpo.LastName,
+                Birthday = dpo.Birthday
+            };
+        }
     }
 }

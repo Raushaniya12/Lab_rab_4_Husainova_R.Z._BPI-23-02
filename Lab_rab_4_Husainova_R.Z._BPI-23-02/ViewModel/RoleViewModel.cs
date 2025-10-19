@@ -24,29 +24,17 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
             }
             set
             {
-                selectedRole = value; OnPropertyChanged("SelectedRole"); EditRole.CanExecute(true);
-
-
+                selectedRole = value; 
+                OnPropertyChanged("SelectedRole"); 
+                EditRole.CanExecute(true);
             }
         }
         public ObservableCollection<Role> ListRole { get; set; } = new ObservableCollection<Role>();
         public RoleViewModel()
         {
-            this.ListRole.Add(new Role
-            {
-                Id = 1,
-                NameRole = "Директор"
-            });
-            this.ListRole.Add(new Role
-            {
-                Id = 2,
-                NameRole = "Бухгалтер"
-            });
-            this.ListRole.Add(new Role
-            {
-                Id = 3,
-                NameRole = "Менеджер"
-            });
+            this.ListRole.Add(new Role{Id = 1,NameRole = "Директор"});
+            this.ListRole.Add(new Role { Id = 2, NameRole = "Бухгалтер" });
+            this.ListRole.Add(new Role { Id = 3, NameRole = "Менеджер" });
         }
         public int MaxId()
         {

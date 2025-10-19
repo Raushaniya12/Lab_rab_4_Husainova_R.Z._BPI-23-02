@@ -17,9 +17,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.Model
         public string RoleName
         {
             get { return _roleName; }
-            set
-            {
-                _roleName = value;
+            set{_roleName = value;
                 OnPropertyChanged("RoleName");
             }
         }
@@ -68,7 +66,9 @@ return (PersonDpo) this.MemberwiseClone();
         }
         public PersonDpo CopyFromPerson(Person person)
         {
-            PersonDpo perDpo = new PersonDpo(); RoleViewModel vmRole = new RoleViewModel(); string role = string.Empty;
+            PersonDpo perDpo = new PersonDpo(); 
+            RoleViewModel vmRole = new RoleViewModel(); 
+            string role = string.Empty;
             foreach (var r in vmRole.ListRole)
             {
                 if (r.Id == person.RoleId)

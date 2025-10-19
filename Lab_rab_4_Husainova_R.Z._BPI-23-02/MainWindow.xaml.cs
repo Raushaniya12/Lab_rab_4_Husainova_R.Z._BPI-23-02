@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace Lab_rab_4_Husainova_R.Z._BPI_23_02
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -27,11 +24,13 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02
         }
         private void Employee_OnClick(object sender, RoutedEventArgs e)
         {
-            WindowEmployee wEmployee = new WindowEmployee(); wEmployee.Show();
+            WindowEmployee wEmployee = new WindowEmployee(); 
+            wEmployee.Show();
         }
         private void Role_OnClick(object sender, RoutedEventArgs e)
         {
-            WindowRole wRole = new WindowRole(); wRole.Show();
+            WindowRole wRole = new WindowRole(); 
+            wRole.Show();
         }
     }
 
