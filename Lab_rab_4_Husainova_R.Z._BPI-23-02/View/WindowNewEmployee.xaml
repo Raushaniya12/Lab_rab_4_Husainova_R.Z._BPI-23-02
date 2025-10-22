@@ -22,21 +22,30 @@
         </Grid.ColumnDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Content="Код:" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="0" Grid.Column="1" Name="TxtId" Text="{Binding Id, Mode=OneWay}" IsReadOnly="True" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="TxtId" 
+                 Text="{Binding Id}" IsReadOnly="True" VerticalAlignment="Center"/>
         <Label Grid.Row="1" Grid.Column="0" Content="Должность:" VerticalAlignment="Center"/>
         <ComboBox Grid.Row="1" Grid.Column="1" Name="CbRole" 
           DisplayMemberPath="NameRole" 
-          SelectedItem="{Binding RoleName, Mode=TwoWay}" 
+          SelectedItem="{Binding RoleName}" 
           VerticalAlignment="Center"/>
         <Label Grid.Row="2" Grid.Column="0" Content="Фамилия:" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Name="TxtLastName" Text="{Binding LastName, Mode=TwoWay}" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="TxtLastName" 
+                 Text="{Binding LastName}" VerticalAlignment="Center"/>
         <Label Grid.Row="3" Grid.Column="0" Content="Имя:" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="3" Grid.Column="1" Name="TxtFirstName" Text="{Binding FirstName, Mode=TwoWay}" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Name="TxtFirstName" 
+                 Text="{Binding FirstName}" VerticalAlignment="Center"/>
         <Label Grid.Row="4" Grid.Column="0" Content="Дата рождения:" VerticalAlignment="Center"/>
-        <DatePicker Grid.Row="4" Grid.Column="1" SelectedDate="{Binding Birthday, Mode=TwoWay}" VerticalAlignment="Center"/>
+        <DatePicker Grid.Row="4" Grid.Column="1" 
+                    SelectedDate="{Binding Birthday}" VerticalAlignment="Center"/>
+        
+        
         <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Сохранить" Click="BtnSave_Click" Margin="5" MinWidth="100"/>
-            <Button Content="Отменить" Click="BtnCancel_Click" Margin="5" MinWidth="100"/>
+            <Button Content="Сохранить" Width="80" Height="25" Margin="0,0,10,0"
+        Command="{Binding SaveCommand}" 
+        IsDefault="True"/>
+            <Button Content="Отмена" Width="80" Height="25"
+        IsCancel="True"/>
         </StackPanel>
     </Grid>
 </Window>

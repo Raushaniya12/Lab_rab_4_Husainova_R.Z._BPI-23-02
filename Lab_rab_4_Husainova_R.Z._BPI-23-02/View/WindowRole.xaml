@@ -13,7 +13,8 @@ Command="{Binding AddRole}"/>
         <Button Content="Редактировать" Height="25" Margin="10,10,5,10"
 Command="{Binding EditRole}"/>
         <Button Content="Удалить" Height="25" Margin="10,10,5,10" Command="{Binding DeleteRole}"/>
-        <ListView x:Name="lvRole" ItemsSource="{Binding ListRole}">
+        <ListView x:Name="lvRole" ItemsSource="{Binding ListRole}"
+                  SelectedItem="{Binding SelectedRole}">
             <ListView.View >
                 <GridView>
                     <GridView.Columns>
@@ -26,6 +27,4 @@ Command="{Binding EditRole}"/>
             </ListView.View>
         </ListView>
     </StackPanel>
-
-
 </Window>

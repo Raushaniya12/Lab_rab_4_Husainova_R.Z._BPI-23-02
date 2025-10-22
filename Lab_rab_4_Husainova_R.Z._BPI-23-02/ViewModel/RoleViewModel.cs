@@ -57,7 +57,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 return addRole ??
                 (addRole = new RelayCommand(obj =>
                 {
-                    WindowRole wnRole = new WindowRole
+                    WindowNewRole wnRole = new WindowNewRole
                     {
                         Title = "Новая должность",
                     };

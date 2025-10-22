@@ -67,6 +67,9 @@
     <Compile Include="View\WindowNewEmployee.xaml.cs">
       <DependentUpon>WindowNewEmployee.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\WindowNewRole.xaml.cs">
+      <DependentUpon>WindowNewRole.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\WindowRole.xaml.cs">
       <DependentUpon>WindowRole.xaml</DependentUpon>
     </Compile>
@@ -87,6 +90,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\WindowNewEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WindowNewRole.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
