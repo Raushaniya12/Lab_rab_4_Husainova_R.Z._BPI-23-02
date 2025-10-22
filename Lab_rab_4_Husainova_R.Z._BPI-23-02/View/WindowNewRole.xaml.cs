@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Lab_rab_4_Husainova_R.Z._BPI_23_02.Model;
+using Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,14 +16,13 @@ using System.Windows.Shapes;
 
 namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.View
 {
-    /// <summary>
-    /// Логика взаимодействия для WindowNewRole.xaml
-    /// </summary>
+    ///
     public partial class WindowNewRole : Window
     {
         public WindowNewRole()
         {
             InitializeComponent();
         }
+       
     }
 }

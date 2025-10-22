@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.View
 {
-    /// <summary>
-    /// Логика взаимодействия для WindowRole.xaml
-    /// </summary>
     public partial class WindowRole : Window
     {
         public WindowRole()

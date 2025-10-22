@@ -80,8 +80,10 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 return editRole ??
                 (editRole = new RelayCommand(obj =>
                 {
-                    WindowRole wnRole = new WindowRole
-                    { Title = "Редактирование должности", }; Role role = SelectedRole;
+                    WindowNewRole wnRole = new WindowNewRole
+                    { Title = "Редактирование должности", 
+                    }; 
+                    Role role = SelectedRole;
                     Role tempRole = new Role(); 
                     tempRole = role.ShallowCopy(); 
                     wnRole.DataContext = tempRole; 
@@ -102,8 +104,9 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 (deleteRole = new RelayCommand(obj =>
                 {
                     Role role = SelectedRole;
-                    MessageBoxResult result = MessageBox.Show("Удалить данные по должности: " + role.NameRole, "Предупреждение", MessageBoxButton.OKCancel,
-    MessageBoxImage.Warning);
+                    MessageBoxResult result = MessageBox.Show("Удалить данные по должности: " 
+                        + role.NameRole, "Предупреждение", MessageBoxButton.OKCancel,
+                        MessageBoxImage.Warning);
                     if (result == MessageBoxResult.OK)
                     {
                         ListRole.Remove(role);

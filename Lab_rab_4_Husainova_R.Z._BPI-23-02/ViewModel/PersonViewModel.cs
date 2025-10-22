@@ -64,7 +64,6 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
             }
             return max;
         }
-        #region AddPerson
         private RelayCommand addPerson;
         public RelayCommand AddPerson
         {
@@ -97,8 +96,6 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 (obj) => true));
             }
         }
-        #endregion
-        #region EditPerson
         private RelayCommand editPerson; 
         public RelayCommand EditPerson
         {
@@ -131,8 +128,6 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 }, (obj) => SelectedPersonDpo != null && ListPersonDpo.Count > 0));
             }
         }
-        #endregion
-        #region DeletePerson
         private RelayCommand deletePerson;
         public RelayCommand DeletePerson
         {
@@ -155,7 +150,6 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 }, (obj) => SelectedPersonDpo != null && ListPersonDpo.Count > 0));
             }
         }
-        #endregion
         public event PropertyChangedEventHandler PropertyChanged; 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
