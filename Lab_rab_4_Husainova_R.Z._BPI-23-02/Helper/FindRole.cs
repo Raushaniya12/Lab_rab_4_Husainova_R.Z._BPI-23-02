@@ -9,7 +9,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.Helper
 {
     public class FindRole
     {
-        int id;
+        private int id;
         public FindRole(int id)
         {
             this.id = id;

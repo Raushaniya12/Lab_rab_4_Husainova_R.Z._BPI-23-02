@@ -17,7 +17,8 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.Model
         public string RoleName
         {
             get { return _roleName; }
-            set{_roleName = value;
+            set{
+                _roleName = value;
                 OnPropertyChanged("RoleName");
             }
         }
@@ -73,7 +74,8 @@ return (PersonDpo) this.MemberwiseClone();
             {
                 if (r.Id == person.RoleId)
                 {
-                    role = r.NameRole; break;
+                    role = r.NameRole; 
+                    break;
                 }
             }
             if (role != string.Empty)

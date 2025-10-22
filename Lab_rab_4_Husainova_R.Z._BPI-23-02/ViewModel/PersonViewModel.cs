@@ -73,7 +73,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 return addPerson ??
                 (addPerson = new RelayCommand(obj =>
                 {
-                    WindowEmployee wnPerson = new WindowEmployee
+                    WindowNewEmployee wnPerson = new WindowNewEmployee
                     {
                         Title = "Новый сотрудник"
                     };
@@ -107,7 +107,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 return editPerson ??
                 (editPerson = new RelayCommand(obj =>
                 {
-                    WindowEmployee wnPerson = new WindowEmployee()
+                    WindowNewEmployee wnPerson = new WindowNewEmployee()
                     {
                         Title = "Редактирование данных сотрудника",
                     };
@@ -142,14 +142,14 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 (deletePerson = new RelayCommand(obj =>
                 {
                     PersonDpo person = SelectedPersonDpo;
-                    MessageBoxResult result = MessageBox.Show("Удалить данные по сотруднику: \n" 
+                    MessageBoxResult result = MessageBox.Show("Удалить данные по сотруднику: \n"
                         + person.LastName + " " + person.FirstName,
                         "Предупреждение", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
                     if (result == MessageBoxResult.OK)
                     {
                         ListPersonDpo.Remove(person);
                         Person per = new Person();
-                        per = per.CopyFromPersonDPO(person); 
+                        per = per.CopyFromPersonDPO(person);
                         ListPerson.Remove(per);
                     }
                 }, (obj) => SelectedPersonDpo != null && ListPersonDpo.Count > 0));

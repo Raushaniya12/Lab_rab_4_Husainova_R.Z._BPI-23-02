@@ -9,7 +9,8 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.Helper
 {
     public class RelayCommand : ICommand
     {
-        private Action<object> execute; private Func<object, bool> canExecute;
+        private Action<object> execute; 
+        private Func<object, bool> canExecute;
         public event EventHandler CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }

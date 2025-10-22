@@ -72,7 +72,8 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 }));
             }
         }
-        private RelayCommand editRole; public RelayCommand EditRole
+        private RelayCommand editRole; 
+        public RelayCommand EditRole
         {
             get
             {
@@ -86,7 +87,6 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                     wnRole.DataContext = tempRole; 
                     if (wnRole.ShowDialog() == true)
                     {
-                        // сохранение данных в оперативной памяти
                         role.NameRole = tempRole.NameRole;
                     }
                 }, (obj) => SelectedRole != null && ListRole.Count > 0));

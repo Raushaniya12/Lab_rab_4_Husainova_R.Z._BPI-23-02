@@ -24,7 +24,8 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.Model
         public Role() { }
         public Role(int id, string nameRole)
         {
-            this.Id = id; this.NameRole = nameRole;
+            this.Id = id; 
+            this.NameRole = nameRole;
         }
         public Role ShallowCopy()
         {
