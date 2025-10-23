@@ -23,6 +23,16 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.View
         {
             InitializeComponent();
         }
-       
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            var role = this.DataContext as Role;
+            if (string.IsNullOrWhiteSpace(role?.NameRole))
+            {
+                MessageBox.Show("Введите наименование должности", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            this.DialogResult = true; 
+        }
     }
 }

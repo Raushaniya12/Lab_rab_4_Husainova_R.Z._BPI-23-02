@@ -110,6 +110,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                     if (result == MessageBoxResult.OK)
                     {
                         ListRole.Remove(role);
+                        SelectedRole = null;
                     }
                 }, (obj) => SelectedRole != null && ListRole.Count > 0));
             }
