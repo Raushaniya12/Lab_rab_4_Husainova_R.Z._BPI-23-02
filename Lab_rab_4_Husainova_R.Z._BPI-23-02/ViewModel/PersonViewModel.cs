@@ -129,7 +129,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                     wnPerson.DataContext = tempPerson;
                     if (wnPerson.ShowDialog() == true)
                     {
-                        Role r = (Role)wnPerson.CbRole.SelectedValue;
+                        Role r = (Role) wnPerson.CbRole.SelectedValue;
                         personDpo.RoleName = r.NameRole;
                         personDpo.FirstName = tempPerson.FirstName;
                         personDpo.LastName = tempPerson.LastName;

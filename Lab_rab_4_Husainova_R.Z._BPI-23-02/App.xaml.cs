@@ -13,5 +13,10 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            ThemeManager.ApplyTheme("LightTheme");
+        }
     }
 }

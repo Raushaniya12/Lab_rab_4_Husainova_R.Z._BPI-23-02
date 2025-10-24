@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02.View"
         mc:Ignorable="d"
-        Title="Новый сотрудник" Height="250" Width="500" MinHeight="250" MinWidth="400">
+        Title="Новый сотрудник" Height="250" Width="500" MinHeight="250" MinWidth="400"
+        Background="{DynamicResource WindowBackground}"
+Foreground="{DynamicResource WindowForeground}">
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02.View"
         mc:Ignorable="d"
-        Title="Сотрудники" Height="450" Width="800">
+        Title="Сотрудники" Height="450" Width="800"
+        Background="{DynamicResource WindowBackground}"
+Foreground="{DynamicResource WindowForeground}">
     <StackPanel>
         <StackPanel Orientation="Horizontal"  Margin="5">
             <Button Content="Добавить" Height="25" Margin="5" Command="{Binding AddPerson}"/>
             <Button Content="Редактировать" Height="25" Margin="5" Command="{Binding EditPerson}"/>
             <Button Content="Удалить" Height="25" Margin="5" Command="{Binding DeletePerson}"/>
         </StackPanel>
-        <ListView x:Name="lvEmployee"
-                  ItemsSource="{Binding ListPersonDpo}"
-                  SelectedItem="{Binding SelectedPersonDpo}">
+        <ListView ItemsSource="{Binding ListPersonDpo}" SelectedItem="{Binding SelectedPersonDpo}">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
