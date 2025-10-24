@@ -100,8 +100,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
         {
             get
             {
-                return deleteRole ??
-                (deleteRole = new RelayCommand(obj =>
+                return deleteRole ?? (deleteRole = new RelayCommand(obj =>
                 {
                     Role role = SelectedRole;
                     MessageBoxResult result = MessageBox.Show("Удалить данные по должности: " 
