@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02.View"
         mc:Ignorable="d"
-        Title="Новая должность" Height="170" Width="400" MinHeight="170" MinWidth="400"
+        Title="Новая должность" Height="200" Width="400" MinHeight="200" MinWidth="400"
         Background="{DynamicResource WindowBackground}"
 Foreground="{DynamicResource WindowForeground}">
 
@@ -20,6 +20,10 @@ Foreground="{DynamicResource WindowForeground}">
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        <WrapPanel  Grid.Column="1" HorizontalAlignment="Right">
+            <Button x:Name="BtnLight" Content="☀️" Click="BtnLight_Click" Margin="5"/>
+            <Button x:Name="BtnDark" Content=" 🌙" Click="BtnDark_Click" Margin="5"/>
+        </WrapPanel>
         <Label Grid.Row="1" Grid.Column="0" Content="Код:" 
                VerticalAlignment="Center" Margin="0,0,10,10"/>
         <TextBox Grid.Row="1" Grid.Column="1" 
