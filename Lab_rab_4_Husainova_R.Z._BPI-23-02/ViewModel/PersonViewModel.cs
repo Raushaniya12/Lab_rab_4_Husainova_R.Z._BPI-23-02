@@ -16,6 +16,18 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
 {
     public class PersonViewModel : INotifyPropertyChanged
     {
+        private static PersonViewModel _instance;
+        public static PersonViewModel Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new PersonViewModel();
+                }
+                return _instance;
+            }
+        }
         private PersonDpo selectedPersonDpo;
         public PersonDpo SelectedPersonDpo
         {
@@ -24,6 +36,9 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
             {
                 selectedPersonDpo = value; 
                 OnPropertyChanged("SelectedPersonDpo");
+                AddPerson.CanExecute(true);
+                EditPerson.CanExecute(true);
+                DeletePerson.CanExecute(true);
             }
         }
         public ObservableCollection<Person> ListPerson { get; set; } = 

@@ -15,6 +15,21 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
 {
     public class RoleViewModel : INotifyPropertyChanged
     {
+
+        public static RoleViewModel _instance;
+        public static RoleViewModel Instance
+        {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = new RoleViewModel();
+            }
+            return _instance;
+        }
+    }
+
+    
         private Role selectedRole;
         public Role SelectedRole
         {
@@ -25,8 +40,10 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
             set
             {
                 selectedRole = value; 
-                OnPropertyChanged("SelectedRole"); 
+                OnPropertyChanged("SelectedRole");
+                AddRole.CanExecute(true);
                 EditRole.CanExecute(true);
+                DeleteRole.CanExecute(true);
             }
         }
         public ObservableCollection<Role> ListRole { get; set; } = new ObservableCollection<Role>();
@@ -81,8 +98,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 (editRole = new RelayCommand(obj =>
                 {
                     WindowNewRole wnRole = new WindowNewRole
-                    { Title = "Редактирование должности", 
-                    }; 
+                    { Title = "Редактирование должности"}; 
                     Role role = SelectedRole;
                     Role tempRole = new Role(); 
                     tempRole = role.ShallowCopy(); 

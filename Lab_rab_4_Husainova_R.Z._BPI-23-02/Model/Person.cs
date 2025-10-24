@@ -24,7 +24,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.Model
         }
         public Person CopyFromPersonDPO(PersonDpo dpo)
         {
-            RoleViewModel vmRole = new RoleViewModel();
+            RoleViewModel vmRole = RoleViewModel.Instance;
             int roleId = 0;
             foreach (var r in vmRole.ListRole)
             {

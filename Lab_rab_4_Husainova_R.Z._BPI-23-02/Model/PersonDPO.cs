@@ -68,7 +68,7 @@ return (PersonDpo) this.MemberwiseClone();
         public PersonDpo CopyFromPerson(Person person)
         {
             PersonDpo perDpo = new PersonDpo(); 
-            RoleViewModel vmRole = new RoleViewModel(); 
+            RoleViewModel vmRole = RoleViewModel.Instance; 
             string role = string.Empty;
             foreach (var r in vmRole.ListRole)
             {

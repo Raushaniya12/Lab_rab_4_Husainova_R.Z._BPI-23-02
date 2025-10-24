@@ -20,7 +20,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.View
         public WindowRole()
         {
             InitializeComponent();
-            DataContext = new RoleViewModel();
+            DataContext = RoleViewModel.Instance;
         }
     }
 }
