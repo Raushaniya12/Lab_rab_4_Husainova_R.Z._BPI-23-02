@@ -165,6 +165,30 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 }, (obj) => SelectedPersonDpo != null && ListPersonDpo.Count > 0));
             }
         }
+        private RelayCommand switchLightTheme;
+        public RelayCommand SwitchLightTheme
+        {
+            get
+            {
+                return switchLightTheme ?? (switchLightTheme = new RelayCommand(obj =>
+                {
+                    ThemeManager.ApplyTheme("LightTheme");
+                }));
+            }
+        }
+
+
+        private RelayCommand switchDarkTheme;
+        public RelayCommand SwitchDarkTheme
+        {
+            get
+            {
+                return switchDarkTheme ?? (switchDarkTheme = new RelayCommand(obj =>
+                {
+                    ThemeManager.ApplyTheme("DarkTheme");
+                }));
+            }
+        }
         public event PropertyChangedEventHandler PropertyChanged; 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {

@@ -10,8 +10,8 @@
 Foreground="{DynamicResource WindowForeground}">
     <StackPanel>
         <WrapPanel  HorizontalAlignment="Right">
-            <Button x:Name="BtnLight" Content="☀️" Click="BtnLight_Click" Margin="5"/>
-            <Button x:Name="BtnDark" Content=" 🌙" Click="BtnDark_Click" Margin="5"/>
+            <Button Content="☀️" Command="{Binding SwitchLightTheme}" Margin="5"/>
+            <Button Content=" 🌙" Command="{Binding SwitchDarkTheme}" Margin="5"/>
         </WrapPanel>
         <StackPanel Orientation="Horizontal"  Margin="5">
             <Button Content="Добавить" Height="25" Margin="5" Command="{Binding AddPerson}"/>
