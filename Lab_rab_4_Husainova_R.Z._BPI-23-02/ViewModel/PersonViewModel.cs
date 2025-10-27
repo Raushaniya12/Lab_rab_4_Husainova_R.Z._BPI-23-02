@@ -189,6 +189,36 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 }));
             }
         }
+        private RelayCommand openEmployeeWindow;
+        public RelayCommand OpenEmployeeWindow
+        {
+            get
+            {
+                if (openEmployeeWindow == null)
+                {
+                    openEmployeeWindow = new RelayCommand(_ =>
+                    {
+                        new WindowEmployee { DataContext = PersonViewModel.Instance }.Show();
+                    });
+                }
+                return openEmployeeWindow;
+            }
+        }
+        private RelayCommand openRoleWindow;
+        public RelayCommand OpenRoleWindow
+        {
+            get
+            {
+                if (openRoleWindow == null)
+                {
+                    openRoleWindow = new RelayCommand(_ =>
+                    {
+                        new WindowRole { DataContext = RoleViewModel.Instance }.Show();
+                    });
+                }
+                return openRoleWindow;
+            }
+        }
         public event PropertyChangedEventHandler PropertyChanged; 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
