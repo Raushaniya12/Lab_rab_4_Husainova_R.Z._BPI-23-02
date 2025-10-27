@@ -14,8 +14,8 @@
             <MenuItem x:Name="Role" Header="Должности" Click="Role_OnClick"/>
         </Menu>
         <WrapPanel HorizontalAlignment="Right">
-            <Button x:Name="BtnLight" Content="☀️" Click="BtnLight_Click" Margin="5"/>
-            <Button x:Name="BtnDark" Content=" 🌙" Click="BtnDark_Click" Margin="5"/>
+            <Button Content="☀️" Command="{Binding SwitchLightTheme}" Margin="5"/>
+            <Button Content=" 🌙" Command="{Binding SwitchDarkTheme}" Margin="5"/>
         </WrapPanel>
     </Grid>
 </Window>
