@@ -13,16 +13,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.View
         {
             InitializeComponent();
             DataContext = PersonViewModel.Instance;
-            LoadRoles();
-        }
-
-        private void LoadRoles()
-        {
-            RoleViewModel vmRole = new RoleViewModel();
-            CbRole.ItemsSource = vmRole.ListRole;
-        }
-      
-        
+        }     
     }
 
 }

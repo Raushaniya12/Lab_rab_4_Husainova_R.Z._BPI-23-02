@@ -16,11 +16,6 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02
 
             try
             {
-                dictionaries.Add(new ResourceDictionary
-                {
-                    Source = new Uri("Themes/CommonStyle.xaml", UriKind.Relative)
-                });
-
                 var uri = new Uri($"Themes/{themeName}.xaml", UriKind.Relative);
                 dictionaries.Add(new ResourceDictionary { Source = uri });
             }

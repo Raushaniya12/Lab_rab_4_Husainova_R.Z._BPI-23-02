@@ -16,13 +16,11 @@ using System.Windows.Shapes;
 
 namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.View
 {
-    ///
     public partial class WindowNewRole : Window
     {
         public WindowNewRole()
         {
             InitializeComponent();
-            DataContext = RoleViewModel.Instance;
         }
         
     }
