@@ -3,11 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel"
         xmlns:local="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02.View"
         mc:Ignorable="d"
-        Title="Новый сотрудник" Height="280" Width="500" MinHeight="280" MinWidth="400"
-        Background="{DynamicResource WindowBackground}"
-Foreground="{DynamicResource WindowForeground}">
+        Title="Новый сотрудник" Height="280" Width="500" MinHeight="280" MinWidth="400">
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -24,8 +23,12 @@ Foreground="{DynamicResource WindowForeground}">
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <WrapPanel Grid.Column="1" HorizontalAlignment="Right">
-            <Button Content="☀️" Command="{Binding SwitchLightTheme}" Margin="5"/>
-            <Button Content=" 🌙" Command="{Binding SwitchDarkTheme}" Margin="5"/>
+            <Button Content="☀️" 
+        Command="{Binding Source={x:Static vm:PersonViewModel.Instance}, Path=SwitchLightTheme}" 
+        Margin="5"/>
+            <Button Content="🌙" 
+        Command="{Binding Source={x:Static vm:PersonViewModel.Instance}, Path=SwitchDarkTheme}" 
+        Margin="5"/>
         </WrapPanel>
         <Label Grid.Row="1" Grid.Column="0" Content="Код:" VerticalAlignment="Center"/>
         <TextBox Grid.Row="1" Grid.Column="1" 

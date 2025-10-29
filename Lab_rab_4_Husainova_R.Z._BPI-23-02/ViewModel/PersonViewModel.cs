@@ -196,11 +196,33 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel
                 return openRoleWindow;
             }
         }
-        private RelayCommand switchLightTheme;
-        public RelayCommand SwitchLightTheme => switchLightTheme = new RelayCommand(_ => ThemeManager.ApplyTheme("LightTheme"));
+        private static RelayCommand switchLightTheme;
+        public static RelayCommand SwitchLightTheme
+        {
+            get
+            {
+                if (switchLightTheme == null)
+                {
+                    switchLightTheme = new RelayCommand(_ => ThemeManager.ApplyTheme("LightTheme"));
+                }
+                return switchLightTheme;
+            }
+        }
 
-        private RelayCommand switchDarkTheme;
-        public RelayCommand SwitchDarkTheme => switchDarkTheme = new RelayCommand(_ => ThemeManager.ApplyTheme("DarkTheme"));
+        private static RelayCommand switchDarkTheme;
+        public static RelayCommand SwitchDarkTheme
+        {
+            get
+            {
+                if (switchDarkTheme == null)
+                {
+                    switchDarkTheme = new RelayCommand(_ => ThemeManager.ApplyTheme("DarkTheme"));
+                }
+                return switchDarkTheme;
+            }
+        }
+
+
         public event PropertyChangedEventHandler PropertyChanged; 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {

@@ -3,11 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel"
         xmlns:local="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02.View"
         mc:Ignorable="d"
-        Title="Сотрудники" Height="450" Width="800"
-        Background="{DynamicResource WindowBackground}"
-Foreground="{DynamicResource WindowForeground}">
+        Title="Сотрудники" Height="450" Width="800">
     <StackPanel>
         <WrapPanel  HorizontalAlignment="Right">
             <Button Content="☀️" Command="{Binding SwitchLightTheme}" Margin="5"/>

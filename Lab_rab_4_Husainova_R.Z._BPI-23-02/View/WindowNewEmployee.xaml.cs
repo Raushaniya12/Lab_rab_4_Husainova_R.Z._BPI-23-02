@@ -12,7 +12,7 @@ namespace Lab_rab_4_Husainova_R.Z._BPI_23_02.View
         public WindowNewEmployee()
         {
             InitializeComponent();
-            DataContext = PersonViewModel.Instance;
+            
         }     
     }
 
