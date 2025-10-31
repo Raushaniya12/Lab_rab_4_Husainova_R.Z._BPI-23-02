@@ -6,7 +6,9 @@
         xmlns:vm="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel"
         xmlns:local="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02.View"
         mc:Ignorable="d"
-        Title="Новая должность" Height="220" Width="400" MinHeight="220" MinWidth="400">
+        Title="Новая должность" Height="220" Width="400" MinHeight="220" MinWidth="400"
+        Background="{DynamicResource WindowBackground}"
+Foreground="{DynamicResource WindowForeground}">
 
     <Grid Margin="15">
         <Grid.RowDefinitions>
@@ -21,10 +23,10 @@
         </Grid.ColumnDefinitions>
         <WrapPanel  Grid.Column="1" HorizontalAlignment="Right">
             <Button Content="☀️" 
-Command="{Binding Source={x:Static vm:PersonViewModel.Instance}, Path=SwitchLightTheme}" 
+Command="{Binding Source={x:Static vm:RoleViewModel.Instance}, Path=SwitchLightTheme}" 
 Margin="5"/>
             <Button Content="🌙" 
-Command="{Binding Source={x:Static vm:PersonViewModel.Instance}, Path=SwitchDarkTheme}" 
+Command="{Binding Source={x:Static vm:RoleViewModel.Instance}, Path=SwitchDarkTheme}" 
 Margin="5"/>
         </WrapPanel>
         <Label Grid.Row="1" Grid.Column="0" Content="Код:" 

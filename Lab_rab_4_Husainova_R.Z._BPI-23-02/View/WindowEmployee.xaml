@@ -6,7 +6,9 @@
         xmlns:vm="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02.ViewModel"
         xmlns:local="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02.View"
         mc:Ignorable="d"
-        Title="Сотрудники" Height="450" Width="800">
+        Title="Сотрудники" Height="450" Width="800"
+        Background="{DynamicResource WindowBackground}"
+        Foreground="{DynamicResource WindowForeground}">
     <StackPanel>
         <WrapPanel  HorizontalAlignment="Right">
             <Button Content="☀️" Command="{Binding SwitchLightTheme}" Margin="5"/>

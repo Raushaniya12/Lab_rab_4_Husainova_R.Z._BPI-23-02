@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02"
         xmlns:system="clr-namespace:System.Windows;assembly=PresentationFramework" 
         mc:Ignorable="d"
-        Title="Окно" Height="100" Width="355">
+        Title="Окно" Height="100" Width="355"   
+        Background="{DynamicResource WindowBackground}"
+        Foreground="{DynamicResource WindowForeground}">
 
     <Grid>
         <Menu>

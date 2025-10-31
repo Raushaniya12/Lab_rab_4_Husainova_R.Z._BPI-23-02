@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02.View"
         mc:Ignorable="d"
-        Title="Должности" Height="350" Width="500">
+        Title="Должности" Height="350" Width="500"
+        Background="{DynamicResource WindowBackground}"
+        Foreground="{DynamicResource WindowForeground}">
+    
     <StackPanel>
         <WrapPanel HorizontalAlignment="Right">
             <Button  Content="☀️" Command="{Binding SwitchLightTheme}" Margin="5"/>
