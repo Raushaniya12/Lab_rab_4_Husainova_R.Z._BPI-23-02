@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Сотрудники" Height="450" Width="800"
         Background="{DynamicResource WindowBackground}"
-        Foreground="{DynamicResource WindowForeground}">
+        Foreground="{DynamicResource WindowForeground}" DataContext="PersonViewModel.Instance">
     <StackPanel>
         <WrapPanel  HorizontalAlignment="Right">
             <Button Content="☀️" Command="{Binding SwitchLightTheme}" Margin="5"/>
@@ -19,10 +19,11 @@
             <Button Content="Редактировать" Height="25" Margin="5" Command="{Binding EditPerson}"/>
             <Button Content="Удалить" Height="25" Margin="5" Command="{Binding DeletePerson}"/>
         </StackPanel>
-        <ListView ItemsSource="{Binding ListPersonDpo}" SelectedItem="{Binding SelectedPersonDpo}">
-            <ListView.View>
-                <GridView>
-                    <GridView.Columns>
+        <ListView ItemsSource="{Binding ListPersonDpo}" SelectedItem="{Binding SelectedPersonDpo}" Background="{DynamicResource WindowBackground}"
+Foreground="{DynamicResource WindowForeground}">
+            <ListView.View >
+                <GridView >
+                    <GridView.Columns >
                         <GridViewColumn Header="Код" Width="50"
                                         DisplayMemberBinding="{Binding Id}"/>
                         <GridViewColumn Header="Фамилия"

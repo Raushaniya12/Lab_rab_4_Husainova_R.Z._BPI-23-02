@@ -6,12 +6,11 @@
         xmlns:local="clr-namespace:Lab_rab_4_Husainova_R.Z._BPI_23_02"
         xmlns:system="clr-namespace:System.Windows;assembly=PresentationFramework" 
         mc:Ignorable="d"
-        Title="Окно" Height="100" Width="355"   
-        Background="{DynamicResource WindowBackground}"
-        Foreground="{DynamicResource WindowForeground}">
+        Title="Окно" Height="100" Width="355">
 
     <Grid>
-        <Menu>
+        <Menu Background="{DynamicResource WindowBackground}"
+Foreground="{DynamicResource WindowForeground}">
             <MenuItem Header="Сотрудники" Command="{Binding OpenEmployeeWindow}"/>
             <MenuItem Header="Должности" Command="{Binding OpenRoleWindow}"/>
         </Menu>

@@ -20,7 +20,8 @@ Command="{Binding AddRole}"/>
         <Button Content="Редактировать" Height="25" Margin="10,10,5,10"
 Command="{Binding EditRole}"/>
         <Button Content="Удалить" Height="25" Margin="10,10,5,10" Command="{Binding DeleteRole}"/>
-        <ListView ItemsSource="{Binding ListRole}" SelectedItem="{Binding SelectedRole}">
+        <ListView ItemsSource="{Binding ListRole}" SelectedItem="{Binding SelectedRole}" Background="{DynamicResource WindowBackground}"
+Foreground="{DynamicResource WindowForeground}">
             <ListView.View >
                 <GridView>
                     <GridView.Columns>
